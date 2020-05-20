@@ -71,7 +71,7 @@ while monsters_count < 10:
             if user_input == '1':
                 print('Вы взяли меч')
                 current_strength = sword_strength
-                print('Ваша сила увеличилась на ' + str(sword_strength))
+                print('Ваша сила стала равна ' + str(sword_strength))
                 time.sleep(delay)
                 break
             elif user_input == '2':
