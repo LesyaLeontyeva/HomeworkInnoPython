@@ -19,21 +19,28 @@ current_strength: int = knight_strength
 current_hp: int = knight_hp
 delay = 2
 
-print('Вы начинаете опасное путешествие')
+print('Вы начинаете опасное путешествие!')
 print('Ваше здоровье и сила атаки равна: %s, %s'
       % (current_hp, current_strength))
 time.sleep(delay)
 
 
-def generator(type):
-    if type == 1:  # событие
+def generator(type_of_action):
+
+    """
+    В этой функции происходит генерации рандомномных значений.
+    type_of_action == 1: - событие, type_of_action == 2:-монстр
+    type_of_action == 3: - яблоко, type_of_action == 4:-меч.
+    """
+    if type_of_action == 1:
         return random.randint(events_border_low, events_border_high)
-    elif type == 2:
-        return random.randint(monster_border_low, monster_border_high)  # монстр
-    elif type == 3:
-        return random.randint(apple_border_low, apple_border_high)  # яблоко
-    elif type == 4:
-        return random.randint(sword_border_low, sword_border_high)  # меч
+    elif type_of_action == 2:
+        return \
+            random.randint(monster_border_low, monster_border_high)
+    elif type_of_action == 3:
+        return random.randint(apple_border_low, apple_border_high)
+    elif type_of_action == 4:
+        return random.randint(sword_border_low, sword_border_high)
 
 
 while monsters_count < 10:
