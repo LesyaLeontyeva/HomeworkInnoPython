@@ -25,12 +25,12 @@ print('Ваше здоровье и сила атаки равна: %s, %s'
 time.sleep(delay)
 
 
-def generator(type_of_action):
-
+def generator(type_of_action: int) -> int:
     """
     В этой функции происходит генерации рандомномных значений.
     type_of_action == 1: - событие, type_of_action == 2:-монстр
     type_of_action == 3: - яблоко, type_of_action == 4:-меч.
+
     """
     if type_of_action == 1:
         return random.randint(events_border_low, events_border_high)
